@@ -12,7 +12,7 @@ const RegistrationForm = () => {
     useEffect(() => {
         const loggedInUser = localStorage.getItem('loggedInUser');
         if (loggedInUser) {
-            navigate('/home');
+            navigate('/');
         }
     }, [navigate]);
 
@@ -73,7 +73,7 @@ const RegistrationForm = () => {
             localStorage.setItem(`cart_${response.data.id}`, JSON.stringify([]));
             
             // Navigate to home page
-            navigate('/home');
+            navigate('/');
         } catch (error) {
             console.error('Registration error:', error.response ? error.response.data : error.message);
             setError('Registration failed. Please check your connection and try again.');

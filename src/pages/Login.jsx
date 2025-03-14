@@ -13,11 +13,11 @@ const LoginForm = () => {
     // Check if user is already logged in
     useEffect(() => {
         // Check to make sure we're on the login page
-        if (window.location.pathname === '/home') {
+        if (window.location.pathname === '/') {
             const loggedInUser = localStorage.getItem('loggedInUser');
             if (loggedInUser) {
                 // Delay navigation sligh
-                    navigate('/home');
+                    navigate('/');
             }
         }
     }, [navigate]);
@@ -80,7 +80,7 @@ const LoginForm = () => {
                     }
     
                     setError(''); // Clear any previous error before navigating
-                    navigate('/home');
+                    navigate('/');
                 } else {
                     setError('Incorrect password. Please try again.');
                 }

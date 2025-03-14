@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { CartContext } from '../CartContext/CartContext';
 import ImageSlider from './Imageslider';
 import CarParts from './CarParts';
+import Footer from './footer';
 
 const HomePage = () => {
     const [products, setProducts] = useState([]);
@@ -80,6 +81,7 @@ const HomePage = () => {
                 ))}
             </div>
             <CarParts />
+            <Footer/>
         </div>
     );
 };

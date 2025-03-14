@@ -2,6 +2,7 @@
 import React,{useState,useEffect,useContext} from "react";
 import { CartContext } from "../CartContext/CartContext";
 import Navbar from "./Navbar";
+import Footer from "./footer";
 const Accessories = () => {
     const [products, setProducts] = useState([]);
     const {cart, setCart} = useContext(CartContext);
@@ -55,7 +56,7 @@ const Accessories = () => {
      </div>
 
 
-
+     <Footer/>
      </div>
 ); 
     

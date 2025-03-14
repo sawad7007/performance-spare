@@ -1,12 +1,12 @@
-import React, { createContext, useState, useEffect, useRef } from "react";
+import React, { createContext, useState, useEffect, useRef, useCallback, useMemo } from "react";
 import axios from "axios";
 
 export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
+export const CartProvider = React.memo(({ children }) => {
     const [cart, setCart] = useState([]);
     const isInitialMount = useRef(true);
-    const lastUpdatedCart = useRef([]); // 🛑 Prevents duplicate updates
+    const lastUpdatedCart = useRef([]);
 
     // 🟢 Fetch cart from DB on login
     useEffect(() => {
@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
                 const response = await axios.get(`http://localhost:3004/users/${loggedInUser.id}`);
                 if (response.data && response.data.cart) {
                     setCart(response.data.cart);
-                    lastUpdatedCart.current = response.data.cart; // Store initial cart to prevent redundant updates
+                    lastUpdatedCart.current = response.data.cart;
                 }
             } catch (error) {
                 console.error("Error fetching cart:", error);
@@ -35,7 +35,6 @@ export const CartProvider = ({ children }) => {
             return;
         }
 
-        // Prevent duplicate API calls if cart is same as last updated cart
         if (JSON.stringify(cart) === JSON.stringify(lastUpdatedCart.current)) return;
 
         const updateCartInDB = async () => {
@@ -44,19 +43,18 @@ export const CartProvider = ({ children }) => {
                 if (!loggedInUser) return;
 
                 await axios.patch(`http://localhost:3004/users/${loggedInUser.id}`, { cart });
-                lastUpdatedCart.current = cart; // Update lastUpdatedCart reference
+                lastUpdatedCart.current = cart;
             } catch (error) {
                 console.error("Error updating cart:", error);
             }
         };
 
-        const debounceTimer = setTimeout(updateCartInDB, 1000); // 🔥 Only updates after 1 sec (prevents frequent calls)
-
+        const debounceTimer = setTimeout(updateCartInDB, 1000);
         return () => clearTimeout(debounceTimer);
     }, [cart]);
 
-    // 🟢 Add product to cart & POST to DB
-    const addToCart = (product) => {
+    // 🟢 Optimized functions with useCallback
+    const addToCart = useCallback((product) => {
         if (!product || !product.id) {
             console.error("Invalid product:", product);
             return;
@@ -72,24 +70,21 @@ export const CartProvider = ({ children }) => {
                 return [...prevCart, { ...product, quantity: 1 }];
             }
         });
-    };
+    }, []);
 
-    // 🟢 Remove product from cart
-    const removeFromCart = (productId) => {
+    const removeFromCart = useCallback((productId) => {
         setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
-    };
+    }, []);
 
-    // 🟢 Increase product quantity
-    const increaseQuantity = (productId) => {
+    const increaseQuantity = useCallback((productId) => {
         setCart((prevCart) =>
             prevCart.map((item) =>
                 item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
             )
         );
-    };
+    }, []);
 
-    // 🟢 Decrease product quantity
-    const decreaseQuantity = (productId) => {
+    const decreaseQuantity = useCallback((productId) => {
         setCart((prevCart) =>
             prevCart.map((item) =>
                 item.id === productId && item.quantity > 1
@@ -97,35 +92,34 @@ export const CartProvider = ({ children }) => {
                     : item
             )
         );
-    };
+    }, []);
 
-    // 🟢 Clear cart on logout
-    const clearCartOnLogout = async () => {
+    const clearCartOnLogout = useCallback(async () => {
         try {
             const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
             if (loggedInUser) {
                 await axios.patch(`http://localhost:3004/users/${loggedInUser.id}`, { cart: [] });
             }
-
             setCart([]);
         } catch (error) {
             console.error("Error clearing cart on logout:", error);
         }
-    };
+    }, []);
+
+    // 🟢 Memoized context value to prevent unnecessary re-renders
+    const cartContextValue = useMemo(() => ({
+        cart,
+        setCart,
+        addToCart,
+        removeFromCart,
+        increaseQuantity,
+        decreaseQuantity,
+        clearCartOnLogout,
+    }), [cart]);
 
     return (
-        <CartContext.Provider
-            value={{
-                cart,
-                setCart,
-                addToCart,
-                removeFromCart,
-                increaseQuantity,
-                decreaseQuantity,
-                clearCartOnLogout,
-            }}
-        >
+        <CartContext.Provider value={cartContextValue}>
             {children}
         </CartContext.Provider>
     );
-};
+});

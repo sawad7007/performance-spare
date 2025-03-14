@@ -5,24 +5,7 @@
       "name": "sawad",
       "email": "sawad7007@gmail.com",
       "password": "112233",
-      "cart": [
-        {
-          "id": "2",
-          "name": "BorgWarner EFR 8374",
-          "description": "Turbocharger with integrated blow-off valve for improved response",
-          "price": 1700,
-          "image": "https://nordicautoimport.no/Userfiles/Upload/images/Modules/Eshop/4257_borg-warner-efr-7670-turbo_20170202213906876.jpg",
-          "quantity": 1
-        },
-        {
-          "id": "1",
-          "name": "High-performance BMW M3 Exhaust ",
-          "description": "Luxury exhaust system for BMW M3",
-          "price": 300,
-          "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
-          "quantity": 1
-        }
-      ]
+      "cart": []
     },
     {
       "id": "82ff",
@@ -113,6 +96,47 @@
         }
       ],
       "createdAt": "2025-03-13T06:38:41.441Z"
+    },
+    {
+      "id": "2b36",
+      "name": "deva",
+      "email": "deva@gmail.com",
+      "password": "112233",
+      "cart": [
+        {
+          "id": "1",
+          "name": "BMW M3",
+          "description": "High-performance sports sedan with inline-six engine",
+          "price": 70000,
+          "image": "https://static1.topspeedimages.com/wordpress/wp-content/uploads/2023/07/p90444094_highres_bmw-x3-xdrive30d-11.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5",
+          "quantity": 2
+        },
+        {
+          "id": "7",
+          "name": "Ford Mustang GT",
+          "description": "Powerful American muscle car with V8 engine",
+          "price": 75000,
+          "image": "https://www.roushperformance.com/cdn/shop/files/501-SR169.jpg?v=1699394877",
+          "quantity": 2
+        },
+        {
+          "id": "8",
+          "name": "Chevrolet Camaro SS",
+          "description": "Aggressive muscle car with roaring V8 power",
+          "price": 60000,
+          "image": "https://di-uploads-pod12.dealerinspire.com/teamchevyvallejo/uploads/2020/11/2021_Chevy_Camaro_engines_6.2LT1V8.png",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Nitrous Express Proton Plus",
+          "description": "Compact nitrous system with user-friendly installation",
+          "price": 650,
+          "image": "https://www.texas-speed.com/images/Product/large/6783.jpg",
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2025-03-14T04:21:30.642Z"
     }
   ],
   "products": [

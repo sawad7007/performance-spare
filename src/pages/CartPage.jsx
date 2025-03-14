@@ -50,7 +50,7 @@ const CartDisplay = () => {
                                 <button 
                                     onClick={() => removeFromCart(item.id)}
                                     className="bg-red-500 text-white px-2 py-1 rounded-md">
-                                    remove
+                                    Remove
                                 </button>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ const CartDisplay = () => {
             
             <div className="flex justify-between mt-4">
                 <button 
-                    onClick={() => navigate("/home")} 
+                    onClick={() => navigate("/")} 
                     className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition-all duration-300"
                 >
                     Shop More
@@ -68,7 +68,7 @@ const CartDisplay = () => {
 
                 {selectedItems.length > 0 && (
                     <button 
-                        onClick={() => navigate("/confirm")} 
+                        onClick={() => navigate("/confirm", { state: { selectedItems } })} 
                         className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300"
                     >
                         Confirm Order

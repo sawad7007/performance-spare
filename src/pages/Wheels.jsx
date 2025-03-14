@@ -2,6 +2,7 @@
 import React,{useState,useEffect,useContext} from "react";
 import { CartContext } from "../CartContext/CartContext";
 import Navbar from "./Navbar";
+import Footer from "./footer";
 const Wheels = () => {
     const [products, setProducts] = useState([]);
     const {cart, setCart} = useContext(CartContext);
@@ -34,7 +35,7 @@ const Wheels = () => {
         <div>
 
 
-        {/* <Navbar/> */}
+        <Navbar/>
          {/* Products Section */}
          <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
          {products.map((product) => (
@@ -54,7 +55,7 @@ const Wheels = () => {
          ))}
      </div>
 
-
+     <Footer/>
 
      </div>
 ); 
