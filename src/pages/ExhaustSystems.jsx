@@ -16,21 +16,25 @@ const ExhaustSystems = () => {
     
 
     const addToCart = (product) => {
-        const existingProduct = cart.find(item => item.id === product.id);
+        console.log("Adding Product to Cart:", product); // Debugging
     
+        const existingProduct = cart.find(item => item.id === product.id);
+        
         if (existingProduct) {
             const updatedCart = cart.map(item =>
                 item.id === product.id
-                    ? { ...item, quantity: item.quantity + 1 } // Quantity increase cheyyunnu
+                    ? { ...item, quantity: item.quantity + 1 } 
                     : item
             );
             setCart(updatedCart);
         } else {
-            setCart([...cart, { ...product, quantity: 1 }]); // Product add cheyyumbol quantity 1 aakanam
+            setCart([...cart, { ...product, quantity: 1 }]); 
         }
     
+        console.log("Updated Cart:", cart); // Debugging
         alert("Product added");
     };
+    
     return(
         <div>
 

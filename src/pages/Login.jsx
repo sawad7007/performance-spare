@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../CartContext/CartContext';
+import Navbar from './Navbar';
 
 const LoginForm = () => {
     const [loginData, setLoginData] = useState({ email: '', password: '', rememberMe: false });
@@ -35,7 +36,7 @@ const LoginForm = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        setError(''); // Reset error message before validation
+        setError('');
         setLoading(true);
     
         if (!loginData.email || !loginData.password) {
@@ -52,25 +53,22 @@ const LoginForm = () => {
     
         try {
             const response = await axios.get(`http://localhost:3004/users?email=${loginData.email}`);
-            
+    
             if (response.data.length > 0) {
                 const user = response.data[0];
     
                 if (user.password === loginData.password) {
-                    const loggedInUser = user;
-    
-                    // Store user data in local storage
-                    localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+                    localStorage.setItem('loggedInUser', JSON.stringify(user));
     
                     try {
-                        const userCartKey = `cart_${loggedInUser.id}`;
+                        const userCartKey = `cart_${user.id}`;
                         let userCart = [];
     
                         const savedCart = localStorage.getItem(userCartKey);
                         if (savedCart) {
                             userCart = JSON.parse(savedCart);
-                        } else if (loggedInUser.cart) {
-                            userCart = loggedInUser.cart;
+                        } else if (user.cart) {
+                            userCart = user.cart;
                             localStorage.setItem(userCartKey, JSON.stringify(userCart));
                         }
     
@@ -79,8 +77,14 @@ const LoginForm = () => {
                         console.error("Error loading cart:", cartError);
                     }
     
-                    setError(''); // Clear any previous error before navigating
-                    navigate('/');
+                    setError('');
+    
+                    //  Admin Check 
+                    if (user.role === "admin") {
+                        navigate('/admindashboard'); // Admin ayal AdminDashboard il
+                    } else {
+                        navigate('/'); // Normal user ayal home page il
+                    }
                 } else {
                     setError('Incorrect password. Please try again.');
                 }
@@ -97,7 +101,10 @@ const LoginForm = () => {
     
 
     return (
+        <div>
+            <Navbar/>
         <div className="flex flex-col md:flex-row items-center gap-8 p-4 md:p-8 min-h-screen w-full">
+
             <div className="w-full md:w-1/2 bg-white rounded-xl shadow-md p-6 mb-6 md:mb-0">
                 <h1 className="text-2xl font-bold mb-6">Customer Login</h1>
                 <p className="mb-6">If you have an account, sign in with your email address.</p>
@@ -168,6 +175,7 @@ const LoginForm = () => {
                 </button>
             </div>
         </div>
+    </div>
     );
 };
 

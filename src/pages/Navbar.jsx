@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../NavbarContext/NavbarContext';
-import { ShoppingCartIcon } from '@heroicons/react/outline';
+import { ShoppingCartIcon, UserIcon } from '@heroicons/react/outline';
 
 const Navbar = ({ cartCount }) => {
     const { isLoggedIn, login, logout } = useAuth();
@@ -9,20 +9,18 @@ const Navbar = ({ cartCount }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
-        // Check if user is logged in by checking localStorage
         const loggedInUser = localStorage.getItem('loggedInUser');
         if (loggedInUser) {
-            login(); // Call login function to update context state
+            login();
         } else {
-            logout(); // If no user is logged in, ensure logout is called
+            logout();
         }
     }, [login, logout]);
 
     const handleLogout = () => {
-        // Get user data before removing from localStorage
         const userData = localStorage.getItem('loggedInUser');
         let userId = null;
-        
+
         if (userData) {
             try {
                 userId = JSON.parse(userData)?.id;
@@ -30,21 +28,15 @@ const Navbar = ({ cartCount }) => {
                 console.error("Error parsing user data:", error);
             }
         }
-        
-        // Remove the logged-in user data from localStorage
+
         localStorage.removeItem('loggedInUser');
 
-        // Also, remove the user's cart data (if stored separately)
         if (userId) {
             const userCartKey = `cart_${userId}`;
             localStorage.removeItem(userCartKey);
         }
 
-        // Update the context to reflect logout
         logout();
-
-      
-      
     };
 
     const handleNavigation = (page) => {
@@ -54,6 +46,14 @@ const Navbar = ({ cartCount }) => {
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
+    };
+
+    const handleUserClick = () => {
+        if (isLoggedIn) {
+            navigate("/account");
+        } else {
+            navigate("/login");
+        }
     };
 
     const productCategories = [
@@ -94,22 +94,6 @@ const Navbar = ({ cartCount }) => {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                    {isLoggedIn ? (
-                        <button 
-                            onClick={handleLogout} 
-                            className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
-                        >
-                            Logout
-                        </button>
-                    ) : (
-                        <button 
-                            onClick={() => navigate("/login")} 
-                            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-                        >
-                            Login
-                        </button>
-                    )}
-
                     <div 
                         className="relative cursor-pointer"
                         onClick={() => navigate("/cart")}
@@ -122,6 +106,14 @@ const Navbar = ({ cartCount }) => {
                             </span>
                         )}
                     </div>
+
+                    <div 
+                        className="cursor-pointer"
+                        onClick={handleUserClick}
+                    >
+                        <UserIcon className="w-6 h-6 text-blue-600 hover:text-blue-500 transition duration-300" />
+                    </div>
+
                 </div>
             </div>
 

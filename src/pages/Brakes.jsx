@@ -30,6 +30,8 @@ const Brakes = () => {
         }
     
         alert("Product added");
+
+        
     };
     return(
         <div>

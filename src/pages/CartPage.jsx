@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../CartContext/CartContext';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const CartDisplay = () => {
     const navigate = useNavigate();
@@ -16,6 +17,8 @@ const CartDisplay = () => {
     };
 
     return (
+        <div>
+            <Navbar/>
         <div className="p-4">
             <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
             {cart.length === 0 ? (
@@ -75,6 +78,7 @@ const CartDisplay = () => {
                     </button>
                 )}
             </div>
+        </div>
         </div>
     );
 };

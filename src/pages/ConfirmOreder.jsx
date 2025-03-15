@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 const ConfirmOrder = () => {
     const navigate = useNavigate();
-    const { cart } = useContext(CartContext);
+    const { cart, removeFromCart } = useContext(CartContext);
     const location = useLocation();
     const selectedItems = location.state?.selectedItems || [];
 
@@ -16,6 +16,10 @@ const ConfirmOrder = () => {
     };
 
     const handleOrderConfirm = () => {
+        // Remove selected items from the cart
+        filteredCart.forEach(item => removeFromCart(item.id));
+
+        // Navigate to address page
         navigate('/address');
     };
 

@@ -1,11 +1,38 @@
 {
   "users": [
     {
+      
       "id": "d6fb",
       "name": "sawad",
       "email": "sawad7007@gmail.com",
       "password": "112233",
-      "cart": []
+      "role": "admin",
+      "cart": [
+        {
+          "id": "1",
+          "name": "BMW M3",
+          "description": "High-performance sports sedan with inline-six engine",
+          "price": 70000,
+          "image": "https://static1.topspeedimages.com/wordpress/wp-content/uploads/2023/07/p90444094_highres_bmw-x3-xdrive30d-11.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5",
+          "quantity": 6
+        },
+        {
+          "id": "2",
+          "name": "ZEX Wet Nitrous System",
+          "description": "Advanced wet nitrous system for optimal fuel mixture",
+          "price": 700,
+          "image": "https://tunersedge.com.au/cdn/shop/products/82026P.jpg?v=1662441821",
+          "quantity": 3
+        },
+        {
+          "id": "4",
+          "name": "NOS Big Pro Fogger System",
+          "description": "High-performance nitrous system for drag racing",
+          "price": 1200,
+          "image": "https://i.ytimg.com/vi/yN4XVIKrWEM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD87igWC5vFOLAZk2oDrtlD0hq_1Q",
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "82ff",
@@ -37,7 +64,16 @@
       "name": "irf",
       "email": "irfan@gmail.com",
       "password": "112233",
-      "cart": [],
+      "cart": [
+        {
+          "id": "1",
+          "name": "BBS CH-R",
+          "description": "Lightweight performance wheel with a sleek design",
+          "price": 2000,
+          "image": "https://cncwheels.com.au/wp-content/uploads/2023/01/Racing_Wheels_Flow_Form_JSR_ST37_Dark_Bronze_Machined_Lip_Japan_JDM_Rims_18_19_inch_white_sticker.jpg",
+          "quantity": 1
+        }
+      ],
       "createdAt": "2025-03-13T06:05:54.596Z"
     },
     {
@@ -135,8 +171,7 @@
           "image": "https://www.texas-speed.com/images/Product/large/6783.jpg",
           "quantity": 1
         }
-      ],
-      "createdAt": "2025-03-14T04:21:30.642Z"
+      ]
     }
   ],
   "products": [

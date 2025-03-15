@@ -4,13 +4,13 @@ import { CartContext } from "../CartContext/CartContext";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 const NOS = () => {
-    const [products, setProducts] = useState([]);
+    const [nos, setNose] = useState([]);
     const {cart, setCart} = useContext(CartContext);
 
     useEffect(() => {
         fetch('http://localhost:3004/nos') 
             .then(response => response.json())
-            .then(data => setProducts(data))
+            .then(data => setNose(data))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
     
@@ -38,7 +38,7 @@ const NOS = () => {
         <Navbar/>
          {/* Products Section */}
          <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-         {products.map((product) => (
+         {nos.map((product) => (
              <div key={product.id} className="border rounded-lg p-4 shadow-md">
                  <img src={product.image} alt={product.name} className="w-full h-55 object-cover rounded-md" />
                  <h3 className="text-lg font-bold mt-2">{product.name}</h3>
