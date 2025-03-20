@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../CartContext/CartContext';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const ConfirmOrder = () => {
     const navigate = useNavigate();
@@ -11,16 +11,81 @@ const ConfirmOrder = () => {
     // Filter selected items from the cart
     const filteredCart = cart.filter(item => selectedItems.includes(item.id));
 
+    // Calculate Total Price
     const getTotalPrice = () => {
         return filteredCart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     };
 
-    const handleOrderConfirm = () => {
-        // Remove selected items from the cart
-        filteredCart.forEach(item => removeFromCart(item.id));
+    // Function to update sales database
+    const updateSales = async (filteredCart) => {
+        try {
+            for (const item of filteredCart) {
+                const response = await fetch(`http://localhost:3004/sales/${item.id}`);
+                if (!response.ok) {
+                    console.error(`Sale update failed for item ${item.id}`);
+                    continue;
+                }
 
-        // Navigate to address page
-        navigate('/address');
+                const salesData = await response.json();
+                const updatedSales = {
+                    ...salesData,
+                    soldQuantity: (salesData.soldQuantity || 0) + item.quantity
+                };
+
+                await fetch(`http://localhost:3004/sales/${item.id}`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(updatedSales),
+                });
+
+                console.log(`Sales updated for item ${item.id}`);
+            }
+        } catch (error) {
+            console.error("Error updating sales:", error);
+        }
+    };
+
+    // Function to update stats
+    const updateStats = async (newSales) => {
+        try {
+            const response = await fetch("http://localhost:3004/stats");
+            if (!response.ok) throw new Error("Stats fetch failed!");
+
+            const statsData = await response.json();
+            const currentStats = statsData[0];
+
+            if (!currentStats) {
+                console.error("Stats entry not found!");
+                return;
+            }
+
+            const updatedStats = {
+                ...currentStats,
+                totalSales: currentStats.totalSales + newSales,
+                totalOrders: currentStats.totalOrders + 1
+            };
+
+            await fetch(`http://localhost:3004/stats/${currentStats.id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updatedStats),
+            });
+
+            console.log("Stats updated successfully!");
+        } catch (error) {
+            console.error("Error updating stats:", error);
+        }
+    };
+
+    // Handle Order Confirmation
+    const handleOrderConfirm = async () => {
+        await updateSales(filteredCart);  
+
+        const newSalesAmount = filteredCart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        await updateStats(newSalesAmount);  
+
+        filteredCart.forEach(item => removeFromCart(item.id)); 
+        navigate("/confirmation", { state: { orderedItems: filteredCart } });
     };
 
     return (

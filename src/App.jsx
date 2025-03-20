@@ -17,15 +17,12 @@ import Brakes from './pages/Brakes';
 import Accessories from './pages/Accessories';
 import Tools from './pages/Tools';
 import ConfirmOrder from './pages/ConfirmOreder';
-// import PaymentPage from './pages/Payment';
 import UserAddressPage from './pages/UserAddress';
 import OrderPage from './pages/OrderPage';
 import Account from './pages/Account';
 import ConfirmationPage from './pages/ConfirmationPage ';
 import AdminDashboard from './pages/AdminDashbord';
-// import { Dashbord } from './pages/Dashbord';
-import ManageOrders from './pages/ManageOrders';
-import Dashbord from './pages/Dashbord';
+import ManageOrders from './pages/ManageUsers';
 import ManageProducts from './pages/ManageProducts';
 
 const App = () => {
@@ -50,16 +47,14 @@ const App = () => {
                         <Route path="/tools" element={<Tools />} />
                         <Route path="/nos" element={<NOS />} />
                         <Route path="/confirm" element={<ConfirmOrder />} />
-                        {/* <Route path="/payment" element={<PaymentPage />} /> */}
                         <Route path="/address" element={<UserAddressPage />} />
                         <Route path="/order" element={<OrderPage />} />
                         <Route path="/account" element={<Account />} />
                         <Route path="/confirmation" element={<ConfirmationPage />} />
 
                         <Route path="/admindashboard" element={<AdminDashboard />} />
-                        <Route path="/admin" element={<Dashbord/>} />
                         <Route path="/admin/products" element={<ManageProducts/>} />
-                        <Route path="/admin/orders" element={<ManageOrders/>} />
+                        <Route path="/admin/users" element={<ManageOrders/>} />
                     </Routes>
                 </CartProvider>
             </AuthProvider>
