@@ -19,15 +19,6 @@
       "status": "Shipped"
     },
     {
-      "id": "82ff",
-      "name": "niyas",
-      "email": "niyas@gmail.com",
-      "password": "112233",
-      "cart": [],
-      "createdAt": "2025-03-13T05:57:24.548Z",
-      "status": "Shipped"
-    },
-    {
       "id": "50f8",
       "name": "irf",
       "email": "irfan@gmail.com",
@@ -149,15 +140,25 @@
       "name": "abu",
       "email": "abu@gmail.com",
       "password": "112233",
-      "cart": [],
+      "cart": [
+        {
+          "id": "2",
+          "name": "Porsche 911",
+          "description": "Iconic sports car with powerful turbocharged engine",
+          "price": "33000",
+          "image": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/press-kits/60-Jahre-911/3.-Generation-Headerbilder/Generation3_Motor.jpg/jcr:content/Generation3_Motor.jpg",
+          "category": "engine",
+          "quantity": 1
+        }
+      ],
       "createdAt": "2025-03-19T05:43:55.354Z",
       "status": "blocked"
     }
   ],
   "stats": [
     {
-      "totalSales": 499500,
-      "totalOrders": 8,
+      "totalSales": 695000,
+      "totalOrders": 19,
       "totalUsers": 6,
       "id": "f87e"
     }
@@ -204,7 +205,7 @@
       "id": "2",
       "name": "Porsche 911",
       "description": "Iconic sports car with powerful turbocharged engine",
-      "price": "35000",
+      "price": "33000",
       "image": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/press-kits/60-Jahre-911/3.-Generation-Headerbilder/Generation3_Motor.jpg/jcr:content/Generation3_Motor.jpg",
       "category": "engine"
     },
@@ -265,28 +266,12 @@
       "category": "wheels"
     },
     {
-      "id": "4",
-      "name": "OZ Racing Ultraleggera",
-      "description": "Super lightweight wheel with racing DNA",
-      "price": 1800,
-      "image": "https://images.vldata.com.au/wheel-styles/24/5cab9a14-8f94-4686-894a-e7a63c099ae1.png",
-      "category": "wheels"
-    },
-    {
       "id": "5",
       "name": "Enkei RPF1",
       "description": "Affordable performance wheel with twin-spoke design",
       "price": 1500,
       "image": "https://m.media-amazon.com/images/I/61EehXKVLKL._AC_UF1000,1000_QL80_.jpg",
       "category": "wheels"
-    },
-    {
-      "id": "1",
-      "name": "NOS Sniper EFI Nitrous Kit",
-      "description": "Entry-level nitrous kit for improved horsepower",
-      "price": 500,
-      "image": "https://images-cdn.ubuy.co.in/635df439222ed42338303b54-nos-07001-nos-nitrous-kit.jpg",
-      "category": "nos"
     },
     {
       "id": "2",
@@ -313,14 +298,6 @@
       "category": "nos"
     },
     {
-      "id": "1",
-      "name": "High-performance BMW M3 Exhaust ",
-      "description": "Luxury exhaust system for BMW M3",
-      "price": 300,
-      "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
-      "category": "exhaust"
-    },
-    {
       "id": "2",
       "name": "Audi RS5 Exhaust",
       "description": "High-performance exhaust for Audi RS5",
@@ -345,14 +322,6 @@
       "category": "exhaust"
     },
     {
-      "id": "1",
-      "name": "Brembo GT Brake Kit",
-      "description": "High-performance brake kit for sports cars",
-      "price": 500,
-      "image": "https://assets.turnermotorsport.com/product_library_tms/1534196_x800.webp",
-      "category": "brakes"
-    },
-    {
       "id": "2",
       "name": "Wilwood Dynalite Brake Kit",
       "description": "Lightweight brake system for enhanced performance",
@@ -375,14 +344,6 @@
       "price": 550,
       "image": "https://clptuning.co.uk/wp-content/uploads/2024/01/617101_x800-1.jpg",
       "category": "brakes"
-    },
-    {
-      "id": "1",
-      "name": "Carbon Fiber Spoiler",
-      "description": "Lightweight and aerodynamic carbon fiber spoiler",
-      "price": 250,
-      "image": "https://seiboncarbon.com/media/catalog/product/cache/71ca68bedc79d61dff7e04ab03c07fd5/r/s/rs22sbimp-sti_01.jpg",
-      "category": "accessories"
     },
     {
       "id": "2",
@@ -479,6 +440,22 @@
       "price": 300,
       "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
       "category": "exhaust"
+    },
+    {
+      "id": "1",
+      "name": "High-performance BMW M3 Exhaust ",
+      "description": "Luxury exhaust system for BMW M3",
+      "price": 300,
+      "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
+      "category": "exhaust"
+    },
+    {
+      "id": "4",
+      "name": "Tomei ARMS M7960",
+      "description": "High-efficiency turbo designed for Japanese performance cars",
+      "price": 1400,
+      "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545",
+      "category": "turbocharger"
     }
   ],
   "recycleBin": [],

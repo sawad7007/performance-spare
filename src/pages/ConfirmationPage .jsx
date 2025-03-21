@@ -26,6 +26,7 @@ const ConfirmationPage = () => {
                 </div>
             </div>
         </div>
+        
     );
 };
 
