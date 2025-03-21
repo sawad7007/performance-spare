@@ -1,166 +1,90 @@
 {
   "users": [
     {
-      "id": "d6fb",
-      "name": "sawad",
+      "id": "8656",
+      "name": "Sawad",
       "email": "sawad7007@gmail.com",
       "password": "112233",
-      "role": "admin",
-      "cart": [
-        {
-          "id": "1",
-          "name": "Brembo GT Brake Kit",
-          "description": "High-performance brake kit for sports cars",
-          "price": 500,
-          "image": "https://assets.turnermotorsport.com/product_library_tms/1534196_x800.webp",
-          "quantity": 1
-        }
-      ],
-      "status": "Shipped"
+      "cart": [],
+      "createdAt": "2025-03-21T10:17:32.480Z",
+      "role":"admin"
     },
     {
-      "id": "50f8",
-      "name": "irf",
+      "id": 1,
+      "name": "irfan",
       "email": "irfan@gmail.com",
-      "password": "112233",
-      "cart": [
-        {
-          "id": "1",
-          "name": "BBS CH-R",
-          "description": "Lightweight performance wheel with a sleek design",
-          "price": 2000,
-          "image": "https://cncwheels.com.au/wp-content/uploads/2023/01/Racing_Wheels_Flow_Form_JSR_ST37_Dark_Bronze_Machined_Lip_Japan_JDM_Rims_18_19_inch_white_sticker.jpg",
-          "quantity": 1
-        }
-      ],
-      "createdAt": "2025-03-13T06:05:54.596Z"
+      "password":"112233",
+      "phone": "9876543210",
+      "address": "Kannur"
     },
     {
-      "id": "a75c",
-      "name": "vahab",
-      "email": "vahab@gmail.com",
-      "password": "112233",
-      "cart": [],
-      "createdAt": "2025-03-13T06:09:43.890Z"
+      "id": 2,
+      "name": "User Two",
+      "email": "user2@gmail.com",
+      "phone": "8765432109",
+      "address": "Calicut"
     },
     {
-      "id": "2b36",
-      "name": "deva",
-      "email": "deva@gmail.com",
-      "password": "112233",
-      "cart": [
-        {
-          "id": "1",
-          "name": "BMW M3",
-          "description": "High-performance sports sedan with inline-six engine",
-          "price": 70000,
-          "image": "https://static1.topspeedimages.com/wordpress/wp-content/uploads/2023/07/p90444094_highres_bmw-x3-xdrive30d-11.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5",
-          "quantity": 2
-        },
-        {
-          "id": "7",
-          "name": "Ford Mustang GT",
-          "description": "Powerful American muscle car with V8 engine",
-          "price": 75000,
-          "image": "https://www.roushperformance.com/cdn/shop/files/501-SR169.jpg?v=1699394877",
-          "quantity": 2
-        },
-        {
-          "id": "8",
-          "name": "Chevrolet Camaro SS",
-          "description": "Aggressive muscle car with roaring V8 power",
-          "price": 60000,
-          "image": "https://di-uploads-pod12.dealerinspire.com/teamchevyvallejo/uploads/2020/11/2021_Chevy_Camaro_engines_6.2LT1V8.png",
-          "quantity": 1
-        },
-        {
-          "id": "3",
-          "name": "Nitrous Express Proton Plus",
-          "description": "Compact nitrous system with user-friendly installation",
-          "price": 650,
-          "image": "https://www.texas-speed.com/images/Product/large/6783.jpg",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "id": "d35e",
-      "name": "new",
-      "email": "new@gmail.com",
-      "password": "112233",
-      "cart": [
-        {
-          "id": "3",
-          "name": "RAYS Volk Racing TE37",
-          "description": "Iconic forged wheel with lightweight construction",
-          "price": 3000,
-          "image": "https://wheelhaven.com/cdn/shop/files/rays_volk_racing_te37_ultra_mspec_gold_wheel_haven.jpg?v=1734022303",
-          "category": "wheels",
-          "quantity": 2
-        },
-        {
-          "id": "4",
-          "name": "NOS Big Pro Fogger System",
-          "description": "High-performance nitrous system for drag racing",
-          "price": 1200,
-          "image": "https://i.ytimg.com/vi/yN4XVIKrWEM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD87igWC5vFOLAZk2oDrtlD0hq_1Q",
-          "category": "nos",
-          "quantity": 1
-        },
-        {
-          "id": "1",
-          "name": "OBD-II Performance Tuner",
-          "description": "Advanced ECU tuning tool for maximum performance gains",
-          "price": 600,
-          "image": "https://m.media-amazon.com/images/I/41NryhfPV0L._AC_UF1000,1000_QL80_.jpg",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "name": "Nissan GT-R",
-          "description": "Legendary Japanese sports car with AWD system",
-          "price": "55000",
-          "image": "https://www-asia.nissan-cdn.net/content/dam/Nissan/singapore/vehicles/gt-r/r351/eulhd/2_minor_change/performance/17TDIeulhd_GTRHelios115.jpg.ximg.l_12_m.smart.jpg",
-          "category": "engine",
-          "quantity": 1
-        }
-      ],
-      "createdAt": "2025-03-18T09:43:10.457Z"
-    },
-    {
-      "id": "d4c6",
-      "name": "azru",
-      "email": "azru@gmail.com",
-      "password": "112233",
-      "cart": [],
-      "createdAt": "2025-03-19T05:26:54.233Z"
-    },
-    {
-      "id": "08ad",
-      "name": "abu",
-      "email": "abu@gmail.com",
+      "id": "8302",
+      "name": "sawadamri",
+      "email": "sawadamri@gmail.com",
       "password": "112233",
       "cart": [
         {
           "id": "2",
-          "name": "Porsche 911",
-          "description": "Iconic sports car with powerful turbocharged engine",
-          "price": "33000",
-          "image": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/press-kits/60-Jahre-911/3.-Generation-Headerbilder/Generation3_Motor.jpg/jcr:content/Generation3_Motor.jpg",
-          "category": "engine",
+          "name": "SPARCO Racing Seat ",
+          "description": "Shop the universal QRT-R series racing seat by SPARCO",
+          "price": 120,
+          "image": "https://www.atech-racing.com/wp-content/uploads/2024/04/Atech-Seat-Performance.webp",
+          "quantity": 2
+        }
+      ],
+      "createdAt": "2025-03-21T06:38:53.764Z"
+    },
+    {
+      "id": "d1da",
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "112233",
+      "cart": [
+        {
+          "id": "4",
+          "name": "Tomei ARMS M7960",
+          "description": "High-efficiency turbo designed for Japanese performance cars",
+          "price": 14000,
+          "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545",
           "quantity": 1
         }
       ],
-      "createdAt": "2025-03-19T05:43:55.354Z",
-      "status": "blocked"
+      "createdAt": "2025-03-21T08:29:04.784Z"
     }
+  
   ],
   "stats": [
     {
-      "totalSales": 695000,
-      "totalOrders": 19,
+      "totalSales": 854510,
+      "totalOrders": 35,
       "totalUsers": 6,
       "id": "f87e"
+    }
+  ],
+  "orders": [
+   
+ 
+    {
+      "id": "100b",
+      "items": [
+        {
+          "id": "4",
+          "name": "Tomei ARMS M7960",
+          "description": "High-efficiency turbo designed for Japanese performance cars",
+          "price": 14000,
+          "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "14000.00",
+      "date": "2025-03-21T08:52:55.754Z"
     }
   ],
   "sales": [
@@ -192,12 +116,27 @@
     {
       "id": "f997",
       "name": "NOS Big Pro Fogger System",
-      "sales": 1200
+      "sales": 12000
     },
     {
       "id": "5015",
       "name": "OBD-II Performance Tuner",
-      "sales": 600
+      "sales": 60000
+    },
+    {
+      "id": "2",
+      "name": "Wilwood Dynalite Brake Kit",
+      "sales": 4500
+    },
+    {
+      "id": "1",
+      "name": "Brembo GT Brake Kit",
+      "sales": 135000
+    },
+    {
+      "id": "4",
+      "name": "Tomei ARMS M7960",
+      "sales": 14000
     }
   ],
   "products": [
@@ -269,7 +208,7 @@
       "id": "5",
       "name": "Enkei RPF1",
       "description": "Affordable performance wheel with twin-spoke design",
-      "price": 1500,
+      "price": 15000,
       "image": "https://m.media-amazon.com/images/I/61EehXKVLKL._AC_UF1000,1000_QL80_.jpg",
       "category": "wheels"
     },
@@ -277,7 +216,7 @@
       "id": "2",
       "name": "ZEX Wet Nitrous System",
       "description": "Advanced wet nitrous system for optimal fuel mixture",
-      "price": 700,
+      "price": 7000,
       "image": "https://tunersedge.com.au/cdn/shop/products/82026P.jpg?v=1662441821",
       "category": "nos"
     },
@@ -285,7 +224,7 @@
       "id": "3",
       "name": "Nitrous Express Proton Plus",
       "description": "Compact nitrous system with user-friendly installation",
-      "price": 650,
+      "price": 6500,
       "image": "https://www.texas-speed.com/images/Product/large/6783.jpg",
       "category": "nos"
     },
@@ -293,7 +232,7 @@
       "id": "4",
       "name": "NOS Big Pro Fogger System",
       "description": "High-performance nitrous system for drag racing",
-      "price": 1200,
+      "price": 12000,
       "image": "https://i.ytimg.com/vi/yN4XVIKrWEM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD87igWC5vFOLAZk2oDrtlD0hq_1Q",
       "category": "nos"
     },
@@ -301,7 +240,7 @@
       "id": "2",
       "name": "Audi RS5 Exhaust",
       "description": "High-performance exhaust for Audi RS5",
-      "price": 350,
+      "price": 9500,
       "image": "https://s.alicdn.com/@sc04/kf/H71eb18cf299c4e0886b9bcf919f2cd83l.jpg_720x720q50.jpg",
       "category": "exhaust"
     },
@@ -309,7 +248,7 @@
       "id": "3",
       "name": "Mercedes AMG GT Exhaust",
       "description": "Sporty exhaust system for Mercedes AMG GT",
-      "price": 400,
+      "price": 4000,
       "image": "https://german-car-accessories.com/cdn/shop/files/2015-2023-mercedes-amg-gt-valved-sport-exhaust-system-c190-coupe-titanium-with-muffler-exhausts-916.jpg?v=1731193679&width=416",
       "category": "exhaust"
     },
@@ -317,7 +256,7 @@
       "id": "4",
       "name": "Porsche 911 Exhaust",
       "description": "Premium exhaust system for Porsche 911",
-      "price": 450,
+      "price": 4500,
       "image": "https://flat6motorsports.com/cdn/shop/products/Soul-Performance-Products-Porsche-992-GT3-Race-Exhaust-System-Catted-Product-Straight-Cut-Signature-Satin-Tips-scaled.jpg?v=1637028917",
       "category": "exhaust"
     },
@@ -325,7 +264,7 @@
       "id": "2",
       "name": "Wilwood Dynalite Brake Kit",
       "description": "Lightweight brake system for enhanced performance",
-      "price": 450,
+      "price": 4500,
       "image": "https://www.ilmotorsport.de/shop/xxlpics/NAB-301455/1/1280/1280/MX-5-Wilwood-Forged-Dynalite-Big-Brake-Kit-MK1-MK2-MK25-1.jpg",
       "category": "brakes"
     },
@@ -333,7 +272,7 @@
       "id": "3",
       "name": "AP Racing Pro 5000R",
       "description": "Track-ready brake system for superior stopping power",
-      "price": 600,
+      "price": 6000,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyu8VQNQn8yo8Zy2BF6ctY5s_ydb1BMQhDDA&s",
       "category": "brakes"
     },
@@ -341,7 +280,7 @@
       "id": "4",
       "name": "StopTech ST-60 Brake Kit",
       "description": "High-performance brake kit with improved cooling",
-      "price": 550,
+      "price": 5500,
       "image": "https://clptuning.co.uk/wp-content/uploads/2024/01/617101_x800-1.jpg",
       "category": "brakes"
     },
@@ -349,7 +288,7 @@
       "id": "2",
       "name": "SPARCO Racing Seat ",
       "description": "Shop the universal QRT-R series racing seat by SPARCO",
-      "price": 120,
+      "price": 1200,
       "image": "https://www.atech-racing.com/wp-content/uploads/2024/04/Atech-Seat-Performance.webp",
       "category": "accessories"
     },
@@ -357,7 +296,7 @@
       "id": "3",
       "name": "Racing Steering Wheel",
       "description": "High-grip racing steering wheel for better control",
-      "price": 180,
+      "price": 1800,
       "image": "https://motorsportpartsaustralia.com.au/wp-content/uploads/2021/02/SPARCO-3.jpg",
       "category": "accessories"
     },
@@ -365,7 +304,7 @@
       "id": "4",
       "name": "Custom Shift Knob",
       "description": "Performance shift knob for a sportier driving experience",
-      "price": 80,
+      "price": 800,
       "image": "https://assets.ecstuning.com/product_library/534197_x800.webp",
       "category": "accessories"
     },
@@ -373,7 +312,7 @@
       "id": "1",
       "name": "OBD-II Performance Tuner",
       "description": "Advanced ECU tuning tool for maximum performance gains",
-      "price": 600,
+      "price": 6000,
       "image": "https://m.media-amazon.com/images/I/41NryhfPV0L._AC_UF1000,1000_QL80_.jpg",
       "category": "tools"
     },
@@ -381,7 +320,7 @@
       "id": "2",
       "name": "Dyno Tuning Kit",
       "description": "Portable dynamometer for real-time  torque measurement",
-      "price": 1200,
+      "price": 12000,
       "image": "https://dirtydirtyracing.com/wp-content/uploads/2019/11/550-937.jpg",
       "category": "tools"
     },
@@ -389,7 +328,7 @@
       "id": "3",
       "name": "Air-Fuel Ratio Gauge",
       "description": "Wideband sensor for accurate air-fuel ratio monitoring",
-      "price": 350,
+      "price": 3500,
       "image": "https://www.innovatemotorsports.com/media/catalog/product/cache/98e38f60309cf7a07d423b034d584af6/3/7/3795_600.jpg",
       "category": "tools"
     },
@@ -397,7 +336,7 @@
       "id": "4",
       "name": "Performance Data Logger",
       "description": "High-speed data logging tool for track and street performance analysis",
-      "price": 800,
+      "price": 8000,
       "image": "https://images.squarespace-cdn.com/content/v1/617303e69c7a0c57e52cca2f/1641173782596-RQEVSRXWAO09B0QA1AN0/DAT-EXP10-FRONT.jpg?format=1000w",
       "category": "tools"
     },
@@ -405,7 +344,7 @@
       "id": "1",
       "name": "Garrett GTX3582R Gen II",
       "description": "High-performance turbocharger for maximum power output",
-      "price": 1500,
+      "price": 15000,
       "image": "https://pacperformance-nop.s3-ap-southeast-2.amazonaws.com/thumbs/0002100_garrett-gtx3582r-gen-ii-turbocharger_625.jpeg",
       "category": "turbocharger"
     },
@@ -413,7 +352,7 @@
       "id": "2",
       "name": "BorgWarner EFR 8374",
       "description": "Turbocharger with integrated blow-off valve for improved response",
-      "price": 1700,
+      "price": 17000,
       "image": "https://nordicautoimport.no/Userfiles/Upload/images/Modules/Eshop/4257_borg-warner-efr-7670-turbo_20170202213906876.jpg",
       "category": "turbocharger"
     },
@@ -421,7 +360,7 @@
       "id": "3",
       "name": "Precision Turbo PT6266",
       "description": "Popular turbo for street and track performance builds",
-      "price": 1600,
+      "price": 16000,
       "image": "https://www.turbozentrum.de/media/image/product/145960/lg/pt-6266-turbolader.jpg",
       "category": "turbocharger"
     },
@@ -429,7 +368,7 @@
       "id": "4",
       "name": "Tomei ARMS M7960",
       "description": "High-efficiency turbo designed for Japanese performance cars",
-      "price": 1400,
+      "price": 14000,
       "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545",
       "category": "turbocharger"
     },
@@ -437,7 +376,7 @@
       "id": "1",
       "name": "High-performance BMW M3 Exhaust ",
       "description": "Luxury exhaust system for BMW M3",
-      "price": 300,
+      "price": 3000,
       "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
       "category": "exhaust"
     },
@@ -445,7 +384,7 @@
       "id": "1",
       "name": "High-performance BMW M3 Exhaust ",
       "description": "Luxury exhaust system for BMW M3",
-      "price": 300,
+      "price": 3000,
       "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
       "category": "exhaust"
     },
@@ -453,7 +392,7 @@
       "id": "4",
       "name": "Tomei ARMS M7960",
       "description": "High-efficiency turbo designed for Japanese performance cars",
-      "price": 1400,
+      "price": 14000,
       "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545",
       "category": "turbocharger"
     }
@@ -471,28 +410,28 @@
       "id": "2",
       "name": "HRE FF10",
       "description": "FlowFormed wheel designed for high performance",
-      "price": 2500,
+      "price": 25000,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw1hR7xHAufU8VqZKnWt9sKsuY6f6nuWXH4g&s"
     },
     {
       "id": "3",
       "name": "RAYS Volk Racing TE37",
       "description": "Iconic forged wheel with lightweight construction",
-      "price": 3000,
+      "price": 30000,
       "image": "https://wheelhaven.com/cdn/shop/files/rays_volk_racing_te37_ultra_mspec_gold_wheel_haven.jpg?v=1734022303"
     },
     {
       "id": "4",
       "name": "OZ Racing Ultraleggera",
       "description": "Super lightweight wheel with racing DNA",
-      "price": 1800,
+      "price": 18000,
       "image": "https://images.vldata.com.au/wheel-styles/24/5cab9a14-8f94-4686-894a-e7a63c099ae1.png"
     },
     {
       "id": "5",
       "name": "Enkei RPF1",
       "description": "Affordable performance wheel with twin-spoke design",
-      "price": 1500,
+      "price": 15000,
       "image": "https://m.media-amazon.com/images/I/61EehXKVLKL._AC_UF1000,1000_QL80_.jpg"
     }
   ],
@@ -501,28 +440,28 @@
       "id": "1",
       "name": "High-performance BMW M3 Exhaust ",
       "description": "Luxury exhaust system for BMW M3",
-      "price": 300,
+      "price": 3000,
       "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg"
     },
     {
       "id": "2",
       "name": "Audi RS5 Exhaust",
       "description": "High-performance exhaust for Audi RS5",
-      "price": 350,
+      "price": 3500,
       "image": "https://s.alicdn.com/@sc04/kf/H71eb18cf299c4e0886b9bcf919f2cd83l.jpg_720x720q50.jpg"
     },
     {
       "id": "3",
       "name": "Mercedes AMG GT Exhaust",
       "description": "Sporty exhaust system for Mercedes AMG GT",
-      "price": 400,
+      "price": 4000,
       "image": "https://german-car-accessories.com/cdn/shop/files/2015-2023-mercedes-amg-gt-valved-sport-exhaust-system-c190-coupe-titanium-with-muffler-exhausts-916.jpg?v=1731193679&width=416"
     },
     {
       "id": "4",
       "name": "Porsche 911 Exhaust",
       "description": "Premium exhaust system for Porsche 911",
-      "price": 450,
+      "price": 4500,
       "image": "https://flat6motorsports.com/cdn/shop/products/Soul-Performance-Products-Porsche-992-GT3-Race-Exhaust-System-Catted-Product-Straight-Cut-Signature-Satin-Tips-scaled.jpg?v=1637028917"
     }
   ],
@@ -531,28 +470,28 @@
       "id": "1",
       "name": "Brembo GT Brake Kit",
       "description": "High-performance brake kit for sports cars",
-      "price": 500,
+      "price": 5000,
       "image": "https://assets.turnermotorsport.com/product_library_tms/1534196_x800.webp"
     },
     {
       "id": "2",
       "name": "Wilwood Dynalite Brake Kit",
       "description": "Lightweight brake system for enhanced performance",
-      "price": 450,
+      "price": 4500,
       "image": "https://www.ilmotorsport.de/shop/xxlpics/NAB-301455/1/1280/1280/MX-5-Wilwood-Forged-Dynalite-Big-Brake-Kit-MK1-MK2-MK25-1.jpg"
     },
     {
       "id": "3",
       "name": "AP Racing Pro 5000R",
       "description": "Track-ready brake system for superior stopping power",
-      "price": 600,
+      "price": 6000,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyu8VQNQn8yo8Zy2BF6ctY5s_ydb1BMQhDDA&s"
     },
     {
       "id": "4",
       "name": "StopTech ST-60 Brake Kit",
       "description": "High-performance brake kit with improved cooling",
-      "price": 550,
+      "price": 5500,
       "image": "https://clptuning.co.uk/wp-content/uploads/2024/01/617101_x800-1.jpg"
     }
   ],
@@ -561,28 +500,28 @@
       "id": "1",
       "name": "Carbon Fiber Spoiler",
       "description": "Lightweight and aerodynamic carbon fiber spoiler",
-      "price": 250,
+      "price": 2500,
       "image": "https://seiboncarbon.com/media/catalog/product/cache/71ca68bedc79d61dff7e04ab03c07fd5/r/s/rs22sbimp-sti_01.jpg"
     },
     {
       "id": "2",
       "name": "SPARCO Racing Seat ",
       "description": "Shop the universal QRT-R series racing seat by SPARCO",
-      "price": 120,
+      "price": 1200,
       "image": "https://www.atech-racing.com/wp-content/uploads/2024/04/Atech-Seat-Performance.webp"
     },
     {
       "id": "3",
       "name": "Racing Steering Wheel",
       "description": "High-grip racing steering wheel for better control",
-      "price": 180,
+      "price": 1800,
       "image": "https://motorsportpartsaustralia.com.au/wp-content/uploads/2021/02/SPARCO-3.jpg"
     },
     {
       "id": "4",
       "name": "Custom Shift Knob",
       "description": "Performance shift knob for a sportier driving experience",
-      "price": 80,
+      "price": 800,
       "image": "https://assets.ecstuning.com/product_library/534197_x800.webp"
     }
   ],
@@ -591,28 +530,28 @@
       "id": "1",
       "name": "OBD-II Performance Tuner",
       "description": "Advanced ECU tuning tool for maximum performance gains",
-      "price": 600,
+      "price": 6000,
       "image": "https://m.media-amazon.com/images/I/41NryhfPV0L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "2",
       "name": "Dyno Tuning Kit",
       "description": "Portable dynamometer for real-time  torque measurement",
-      "price": 1200,
+      "price": 12000,
       "image": "https://dirtydirtyracing.com/wp-content/uploads/2019/11/550-937.jpg"
     },
     {
       "id": "3",
       "name": "Air-Fuel Ratio Gauge",
       "description": "Wideband sensor for accurate air-fuel ratio monitoring",
-      "price": 350,
+      "price": 3500,
       "image": "https://www.innovatemotorsports.com/media/catalog/product/cache/98e38f60309cf7a07d423b034d584af6/3/7/3795_600.jpg"
     },
     {
       "id": "4",
       "name": "Performance Data Logger",
       "description": "High-speed data logging tool for track and street performance analysis",
-      "price": 800,
+      "price": 8000,
       "image": "https://images.squarespace-cdn.com/content/v1/617303e69c7a0c57e52cca2f/1641173782596-RQEVSRXWAO09B0QA1AN0/DAT-EXP10-FRONT.jpg?format=1000w"
     }
   ],
@@ -621,28 +560,28 @@
       "id": "1",
       "name": "Garrett GTX3582R Gen II",
       "description": "High-performance turbocharger for maximum power output",
-      "price": 1500,
+      "price": 15000,
       "image": "https://pacperformance-nop.s3-ap-southeast-2.amazonaws.com/thumbs/0002100_garrett-gtx3582r-gen-ii-turbocharger_625.jpeg"
     },
     {
       "id": "2",
       "name": "BorgWarner EFR 8374",
       "description": "Turbocharger with integrated blow-off valve for improved response",
-      "price": 1700,
+      "price": 17000,
       "image": "https://nordicautoimport.no/Userfiles/Upload/images/Modules/Eshop/4257_borg-warner-efr-7670-turbo_20170202213906876.jpg"
     },
     {
       "id": "3",
       "name": "Precision Turbo PT6266",
       "description": "Popular turbo for street and track performance builds",
-      "price": 1600,
+      "price": 16000,
       "image": "https://www.turbozentrum.de/media/image/product/145960/lg/pt-6266-turbolader.jpg"
     },
     {
       "id": "4",
       "name": "Tomei ARMS M7960",
       "description": "High-efficiency turbo designed for Japanese performance cars",
-      "price": 1400,
+      "price": 14000,
       "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545"
     }
   ],
@@ -651,28 +590,28 @@
       "id": "1",
       "name": "NOS Sniper EFI Nitrous Kit",
       "description": "Entry-level nitrous kit for improved horsepower",
-      "price": 500,
+      "price": 5000,
       "image": "https://images-cdn.ubuy.co.in/635df439222ed42338303b54-nos-07001-nos-nitrous-kit.jpg"
     },
     {
       "id": "2",
       "name": "ZEX Wet Nitrous System",
       "description": "Advanced wet nitrous system for optimal fuel mixture",
-      "price": 700,
+      "price": 7000,
       "image": "https://tunersedge.com.au/cdn/shop/products/82026P.jpg?v=1662441821"
     },
     {
       "id": "3",
       "name": "Nitrous Express Proton Plus",
       "description": "Compact nitrous system with user-friendly installation",
-      "price": 650,
+      "price": 6500,
       "image": "https://www.texas-speed.com/images/Product/large/6783.jpg"
     },
     {
       "id": "4",
       "name": "NOS Big Pro Fogger System",
       "description": "High-performance nitrous system for drag racing",
-      "price": 1200,
+      "price": 12000,
       "image": "https://i.ytimg.com/vi/yN4XVIKrWEM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD87igWC5vFOLAZk2oDrtlD0hq_1Q"
     }
   ]

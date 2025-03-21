@@ -87,3 +87,49 @@
 // };
 
 // export default PaymentPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // "orders": [
+  //   {
+  //     "id": "d730",
+  //     "items": [
+  //       {
+  //         "id": "1",
+  //         "name": "BBS CH-R",
+  //         "description": "Lightweight performance wheel with a sleek design",
+  //         "price": 2000,
+  //         "image": "https://cncwheels.com.au/wp-content/uploads/2023/01/Racing_Wheels_Flow_Form_JSR_ST37_Dark_Bronze_Machined_Lip_Japan_JDM_Rims_18_19_inch_white_sticker.jpg",
+  //         "quantity": 1
+  //       }
+  //     ],
+  //     "totalAmount": "2000.00",
+  //     "date": "2025-03-21T05:53:30.073Z"
+  //   },
+  //   {
+  //     "id": "0a5e",
+  //     "items": [
+  //       {
+  //         "id": "1",
+  //         "name": "Brembo GT Brake Kit",
+  //         "description": "High-performance brake kit for sports cars",
+  //         "price": 500,
+  //         "image": "https://assets.turnermotorsport.com/product_library_tms/1534196_x800.webp",
+  //         "quantity": 1
+  //       }
+  //     ],
+  //     "totalAmount": "500.00",
+  //     "date": "2025-03-21T06:25:13.479Z"
+  //   }
+  // ],

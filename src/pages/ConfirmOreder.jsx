@@ -21,29 +21,44 @@ const ConfirmOrder = () => {
         try {
             for (const item of filteredCart) {
                 const response = await fetch(`http://localhost:3004/sales/${item.id}`);
-                if (!response.ok) {
-                    console.error(`Sale update failed for item ${item.id}`);
-                    continue;
+                
+                if (response.ok) {
+                    // Product already exists in sales, update it
+                    const salesData = await response.json();
+                    const updatedSales = {
+                        ...salesData,
+                        sales: salesData.sales + (item.price * item.quantity) // Update sales amount
+                    };
+    
+                    await fetch(`http://localhost:3004/sales/${item.id}`, {
+                        method: "PUT",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(updatedSales),
+                    });
+    
+                    console.log(`Sales updated for item ${item.id}`);
+                } else {
+                    // New product, add it to sales
+                    const newSalesEntry = {
+                        id: item.id,
+                        name: item.name,
+                        sales: item.price * item.quantity
+                    };
+    
+                    await fetch("http://localhost:3004/sales", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(newSalesEntry),
+                    });
+    
+                    console.log(`New sales entry added for item ${item.id}`);
                 }
-
-                const salesData = await response.json();
-                const updatedSales = {
-                    ...salesData,
-                    soldQuantity: (salesData.soldQuantity || 0) + item.quantity
-                };
-
-                await fetch(`http://localhost:3004/sales/${item.id}`, {
-                    method: "PUT",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(updatedSales),
-                });
-
-                console.log(`Sales updated for item ${item.id}`);
             }
         } catch (error) {
             console.error("Error updating sales:", error);
         }
     };
+    
 
     // Function to update stats
     const updateStats = async (newSales) => {
@@ -77,16 +92,47 @@ const ConfirmOrder = () => {
         }
     };
 
-    // Handle Order Confirmation
     const handleOrderConfirm = async () => {
         await updateSales(filteredCart);  
-
+    
         const newSalesAmount = filteredCart.reduce((total, item) => total + (item.price * item.quantity), 0);
-        await updateStats(newSalesAmount);  
-
-        filteredCart.forEach(item => removeFromCart(item.id)); 
+        await updateStats(newSalesAmount);
+    
+        await updateOrders(filteredCart); // Orders DB-il add cheyyan ithu call cheyyanam
+    
+        filteredCart.forEach(item => removeFromCart(item.id));
         navigate("/confirmation", { state: { orderedItems: filteredCart } });
     };
+    
+
+
+
+
+    // Function to update orders database
+const updateOrders = async (filteredCart) => {
+    try {
+        const orderData = {
+            items: filteredCart,
+            totalAmount: getTotalPrice(),
+            date: new Date().toISOString()
+        };
+
+        const response = await fetch("http://localhost:3004/orders", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(orderData),
+        });
+
+        if (!response.ok) throw new Error("Failed to add order!");
+
+        console.log("Order added successfully!");
+    } catch (error) {
+        console.error("Error adding order:", error);
+    }
+};
+
+
+    
 
     return (
         <div className="p-4">
