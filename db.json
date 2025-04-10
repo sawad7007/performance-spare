@@ -5,20 +5,48 @@
       "name": "Sawad",
       "email": "sawad7007@gmail.com",
       "password": "112233",
-      "cart": [],
+      "cart": [
+        {
+          "id": "2",
+          "name": "Porsche 911",
+          "description": "Iconic sports car with powerful turbocharged engine",
+          "price": "5555",
+          "image": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/press-kits/60-Jahre-911/3.-Generation-Headerbilder/Generation3_Motor.jpg/jcr:content/Generation3_Motor.jpg",
+          "category": "engine",
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Porsche 911 Exhaust",
+          "description": "Premium exhaust system for Porsche 911",
+          "price": 4500,
+          "image": "https://flat6motorsports.com/cdn/shop/products/Soul-Performance-Products-Porsche-992-GT3-Race-Exhaust-System-Catted-Product-Straight-Cut-Signature-Satin-Tips-scaled.jpg?v=1637028917",
+          "category": "exhaust",
+          "quantity": 1
+        },
+        {
+          "id": "9",
+          "name": "Dodge Challenger R/T",
+          "description": "Classic muscle car with a HEMI V8 engine",
+          "price": 80000,
+          "image": "https://www.dodge.com/content/dam/cross-regional/emea/dodge/en_me/2021/challenger/performance/desktop/2021-dodge-challenger-performance-5.7L-hemi-v8-engine.jpg",
+          "category": "engine",
+          "quantity": 1
+        }
+      ],
       "createdAt": "2025-03-21T10:17:32.480Z",
-      "role":"admin"
+      "role": "admin"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "irfan",
       "email": "irfan@gmail.com",
-      "password":"112233",
+      "password": "112233",
       "phone": "9876543210",
       "address": "Kannur"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "User Two",
       "email": "user2@gmail.com",
       "phone": "8765432109",
@@ -58,19 +86,16 @@
       ],
       "createdAt": "2025-03-21T08:29:04.784Z"
     }
-  
   ],
   "stats": [
     {
-      "totalSales": 854510,
-      "totalOrders": 35,
+      "totalSales": 942510,
+      "totalOrders": 37,
       "totalUsers": 6,
       "id": "f87e"
     }
   ],
   "orders": [
-   
- 
     {
       "id": "100b",
       "items": [
@@ -85,6 +110,38 @@
       ],
       "totalAmount": "14000.00",
       "date": "2025-03-21T08:52:55.754Z"
+    },
+    {
+      "id": "4c7a",
+      "items": [
+        {
+          "id": "2",
+          "name": "Porsche 911",
+          "description": "Iconic sports car with powerful turbocharged engine",
+          "price": "33000",
+          "image": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/press-kits/60-Jahre-911/3.-Generation-Headerbilder/Generation3_Motor.jpg/jcr:content/Generation3_Motor.jpg",
+          "category": "engine",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "33000.00",
+      "date": "2025-03-22T05:13:11.674Z"
+    },
+    {
+      "id": "5f8b",
+      "items": [
+        {
+          "id": "5",
+          "name": "Nissan GT-R",
+          "description": "Legendary Japanese sports car with AWD system",
+          "price": "55000",
+          "image": "https://www-asia.nissan-cdn.net/content/dam/Nissan/singapore/vehicles/gt-r/r351/eulhd/2_minor_change/performance/17TDIeulhd_GTRHelios115.jpg.ximg.l_12_m.smart.jpg",
+          "category": "engine",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": "55000.00",
+      "date": "2025-03-23T08:01:19.667Z"
     }
   ],
   "sales": [
@@ -126,7 +183,7 @@
     {
       "id": "2",
       "name": "Wilwood Dynalite Brake Kit",
-      "sales": 4500
+      "sales": 37500
     },
     {
       "id": "1",
@@ -137,6 +194,11 @@
       "id": "4",
       "name": "Tomei ARMS M7960",
       "sales": 14000
+    },
+    {
+      "id": "5",
+      "name": "Nissan GT-R",
+      "sales": 55000
     }
   ],
   "products": [
@@ -144,7 +206,7 @@
       "id": "2",
       "name": "Porsche 911",
       "description": "Iconic sports car with powerful turbocharged engine",
-      "price": "33000",
+      "price": "5555",
       "image": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/press-kits/60-Jahre-911/3.-Generation-Headerbilder/Generation3_Motor.jpg/jcr:content/Generation3_Motor.jpg",
       "category": "engine"
     },
@@ -309,14 +371,6 @@
       "category": "accessories"
     },
     {
-      "id": "1",
-      "name": "OBD-II Performance Tuner",
-      "description": "Advanced ECU tuning tool for maximum performance gains",
-      "price": 6000,
-      "image": "https://m.media-amazon.com/images/I/41NryhfPV0L._AC_UF1000,1000_QL80_.jpg",
-      "category": "tools"
-    },
-    {
       "id": "2",
       "name": "Dyno Tuning Kit",
       "description": "Portable dynamometer for real-time  torque measurement",
@@ -339,14 +393,6 @@
       "price": 8000,
       "image": "https://images.squarespace-cdn.com/content/v1/617303e69c7a0c57e52cca2f/1641173782596-RQEVSRXWAO09B0QA1AN0/DAT-EXP10-FRONT.jpg?format=1000w",
       "category": "tools"
-    },
-    {
-      "id": "1",
-      "name": "Garrett GTX3582R Gen II",
-      "description": "High-performance turbocharger for maximum power output",
-      "price": 15000,
-      "image": "https://pacperformance-nop.s3-ap-southeast-2.amazonaws.com/thumbs/0002100_garrett-gtx3582r-gen-ii-turbocharger_625.jpeg",
-      "category": "turbocharger"
     },
     {
       "id": "2",
@@ -373,28 +419,20 @@
       "category": "turbocharger"
     },
     {
-      "id": "1",
-      "name": "High-performance BMW M3 Exhaust ",
-      "description": "Luxury exhaust system for BMW M3",
-      "price": 3000,
-      "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
-      "category": "exhaust"
-    },
-    {
-      "id": "1",
-      "name": "High-performance BMW M3 Exhaust ",
-      "description": "Luxury exhaust system for BMW M3",
-      "price": 3000,
-      "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
-      "category": "exhaust"
-    },
-    {
       "id": "4",
       "name": "Tomei ARMS M7960",
       "description": "High-efficiency turbo designed for Japanese performance cars",
       "price": 14000,
       "image": "https://www.carmodsaustralia.com.au/assets/full/173023.jpg?20220905131545",
       "category": "turbocharger"
+    },
+    {
+      "id": "1",
+      "name": "High-performance BMW M3 Exhaust ",
+      "description": "Luxury exhaust system for BMW M3",
+      "price": 3000,
+      "image": "https://s.alicdn.com/@sc04/kf/A599b0f3995bf4e01adc848811b90f8fe9.jpg_720x720q50.jpg",
+      "category": "exhaust"
     }
   ],
   "recycleBin": [],
